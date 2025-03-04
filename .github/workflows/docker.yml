@@ -31,7 +31,7 @@ jobs:
         run: |
           IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/gstreamer-rust
           docker buildx build --push \
-            --platform linux/amd64,linux/arm64 \
+            --platform linux/arm64 \
             -t $IMAGE_NAME:latest \
             -t $IMAGE_NAME:${{ github.sha }} \
             .
